@@ -29,15 +29,5 @@ pipeline {
             }
         }
 
-        stage('Deployment') {
-            steps {
-                sh '''
-                    docker stop webapp || true
-                    docker rm webapp || true
-                    docker pull $DOCKER_IMAGE
-                    docker run -d --name webapp -p 30008:80 $DOCKER_IMAGE
-                '''
-            }
-        }
     }
 }
