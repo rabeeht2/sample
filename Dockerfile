@@ -7,5 +7,5 @@ WORKDIR /app
 # Copy all files from the current directory to /app inside the container
 COPY . .
 
-# Default command to keep the container running
+
 CMD ["sh"]
